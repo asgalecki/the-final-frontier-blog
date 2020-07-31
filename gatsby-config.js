@@ -1,10 +1,12 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
- */
-
 module.exports = {
-  /* Your site config here */
-  plugins: [],
+  siteMetadata: {
+    title: "The Final Frontier",
+    description: "Astronomy Blog",
+    author: "Artur Gałecki"
+  },
+  plugins: [
+    'gatsby-plugin-resolve-src',
+    `gatsby-plugin-postcss`,
+    `gatsby-plugin-sass`
+  ],
 }
