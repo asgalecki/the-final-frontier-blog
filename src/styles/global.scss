@@ -13,13 +13,7 @@ html {
 
 body {
   background-color: navy;
-
-  & div {
-    color: #ffffff;
-  }
 }
-
-$darkgrey-color: rgb(80, 84, 91);
 
 @import 'variables';
 @import 'navbar';

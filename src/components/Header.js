@@ -4,7 +4,8 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header__container">
-        <p className="header__paragraph">"...To boldly go where no one has gone before..."</p>
+        <h2 className="header__title">"...To boldly go where no one has gone before..."</h2>
+        <h6 className="header__title header__title--align">cpt. Jean-Luc Picard</h6>
       </div>
     </header>
   )

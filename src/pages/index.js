@@ -1,10 +1,13 @@
-import React from "react"
-import Layout from "../components/Layout"
+import React from 'react';
+import Layout from '../components/Layout';
+import Main from '../components/Main';
+import Aside from '../components/Aside';
 
 export default function Home() {
   return (
     <Layout>
-      <p>Dummy text</p>
+      <Main />
+      <Aside />
     </Layout>
   )
 }

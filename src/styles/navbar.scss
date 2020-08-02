@@ -1,0 +1,45 @@
+.nav {
+  position: sticky;
+  top: 0;
+  height: 4rem;
+  background-color: $darkgrey-color;
+
+  &__container {
+    margin: 0 1rem;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    cursor: pointer;
+    padding: 0.4rem 0.5rem 0.2rem;
+    color: $white-color !important;
+    text-decoration-line: none !important;
+    transition: all 0.5s ease;
+
+    &:focus,
+    &:hover {
+      color: $darkgrey-color !important;
+      background-color: $white-color-alpha;
+    }
+  }
+
+  &__button {
+    cursor: pointer;
+    padding: 0.3rem 0.3rem;
+    color: $white-color;
+    background-color: $darkgrey-color-alpha;
+    transition: all 0.5s ease;
+
+    &:focus,
+    &:hover {
+      color: $darkgrey-color;
+      background-color: $white-color-alpha;
+    }
+  }
+
+  &__navbar {
+    list-style: none;
+  }
+}

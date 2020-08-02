@@ -1,0 +1,17 @@
+.header {
+  background-color: $white-color-alpha2;
+
+  &__container {
+    margin: 0 10%;
+    padding: 20vh 0 1vh;
+  }
+
+  &__title {
+    color: $white-color-alpha;
+    text-shadow: 3px 3px $darkgrey-color-alpha;
+
+    &--align {
+      text-align: right;
+    }
+  }
+}

@@ -7,6 +7,12 @@ module.exports = {
   plugins: [
     'gatsby-plugin-resolve-src',
     `gatsby-plugin-postcss`,
-    `gatsby-plugin-sass`
+    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      },
+    },
   ],
 }
