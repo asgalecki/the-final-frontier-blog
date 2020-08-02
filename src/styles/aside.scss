@@ -2,7 +2,61 @@
   background-color: $white-color-alpha;
 
   &__container {
-    margin: 10%;
-    padding-top: 10rem;
+    margin: 0 10%;
+    padding: 1rem 0;
+  }
+}
+
+.recent-posts {
+
+  &__title {
+    text-align: center;
+  }
+
+  &__post {
+    border-bottom: 1px solid $darkgrey-color;
+    padding: 0.5rem 0;
+
+    &--title {
+      margin-bottom: 0;
+    }
+  }
+
+  &__date {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+}
+
+.tags {
+
+  &__title {
+    text-align: center;
+    margin: 1.5rem 0;
+  }
+
+  &__paragraph {
+    margin: 0;
+  }
+
+  &__link {
+    text-indent: 0.5rem;
+  }
+}
+
+.links {
+
+  &__title {
+    text-align: center;
+    margin: 1.5rem 0;
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+
+    &--margin {
+      margin: 0;
+    }
   }
 }
