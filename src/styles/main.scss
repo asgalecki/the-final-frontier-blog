@@ -17,7 +17,6 @@
   }
 
   &__image {
-    width: 100%;
     margin: 1rem 0;
   }
 
@@ -26,9 +25,15 @@
     line-height: 0.1rem;
   }
 
-  &__date {
+  &__date,
+  &__tag {
     line-height: 0.1rem;
     font-size: 16px;
+    margin-bottom: 0;
+  }
+
+  &__tags {
+    margin: 0.5rem 0 1rem;
   }
 
   &__link {

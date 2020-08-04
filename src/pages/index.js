@@ -6,8 +6,10 @@ import Aside from '../components/Aside';
 export default function Home() {
   return (
     <Layout>
-      <Main />
-      <Aside />
+      <div className="layout__container">
+        <Main />
+        <Aside />
+      </div>
     </Layout>
   )
 }
