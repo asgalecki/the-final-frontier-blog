@@ -2,6 +2,7 @@
 
   .header,
   .footer,
+  .nav__container,
   .layout__container {
     width: 540px;
     margin: 0 auto;
@@ -12,6 +13,7 @@
 
   .header,
   .footer,
+  .nav__container,
   .layout__container {
     width: 720px;
   }
@@ -24,6 +26,37 @@
     margin: 1rem auto;
   }
 
+  .nav {
+
+    .hamburger {
+      display: none;
+    }
+
+    &__menu {
+      position: inherit;
+      height: inherit;
+      width: 70%;
+      transform: none;
+      border-top: none;
+
+      &--active {
+        box-shadow: none;
+      }
+    }
+
+    &__list {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-end;
+      margin: 0 0 0 1rem;
+      padding: 0.4rem 0.5rem 0.2rem;
+    }
+
+    &__item {
+      margin: 0 0 0 1rem;
+    }
+  }
+
   .header {
     box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
   }
@@ -31,7 +64,7 @@
   .main,
   .aside,
   .footer {
-    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 5px 5px 10px 0px $black-color-shadow;
   }
 
   .main {
@@ -62,6 +95,7 @@
 
   .header,
   .footer,
+  .nav__container,
   .layout__container {
     width: 960px;
   }
@@ -92,6 +126,7 @@
 
   .header,
   .footer,
+  .nav__container,
   .layout__container {
     width: 960px;
   }

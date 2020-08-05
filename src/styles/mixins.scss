@@ -21,3 +21,19 @@
     @content;
   }
 }
+
+@mixin transition-basic {
+  transition: all 0.5s ease;
+}
+
+@mixin hamburger-line {
+  width: 100%;
+  height: 3px;
+  background-color: $white-color;
+  position: absolute;
+}
+
+@mixin nav-color-white {
+  color: $white-color !important;
+  text-decoration-line: none !important;
+}

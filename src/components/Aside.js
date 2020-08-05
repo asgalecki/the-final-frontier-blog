@@ -23,8 +23,8 @@ const Aside = () => {
         <section className="tags">
           <h3 className="tags__title">Tags</h3>
           <p className="tags__paragraph">
-            <Link className="tags__link" to="./">#Space</Link>, 
-            <Link className="tags__link" to="./">#Sun</Link>, 
+            <Link className="tags__link" to="./">#Space</Link>
+            <Link className="tags__link" to="./">#Sun</Link>
             <Link className="tags__link" to="./">#Moon</Link>
           </p>
         </section>

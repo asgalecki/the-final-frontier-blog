@@ -3,44 +3,57 @@
   top: 0;
   height: 4rem;
   background-color: $darkgrey-color;
-  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 5px 10px 0px $black-color-shadow;
 
   &__container {
     margin: 0 1rem;
     padding: 1rem 0;
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-between;
   }
 
   &__logo {
     cursor: pointer;
     padding: 0.4rem 0.5rem 0.2rem;
-    color: $white-color !important;
-    text-decoration-line: none !important;
-    transition: all 0.5s ease;
+    @include nav-color-white;
+    @include transition-basic;
+  }
 
-    &:focus,
-    &:hover {
-      color: $darkgrey-color !important;
-      background-color: $white-color-alpha;
+  &__menu {
+    height: 100vh;
+    width: 250px;
+    display: inline-block;
+
+    background-color: $darkgrey-color;
+
+    position: absolute;
+    top: 4rem;
+    left: 0;
+
+    transform: translateX(-250px);
+    @include transition-basic;
+
+    border-top: 1px solid $white-color;
+
+    &--active {
+      transform: translateX(0px);
+      box-shadow: 5px 5px 10px 0px $black-color-shadow;
     }
   }
 
-  &__button {
-    cursor: pointer;
-    padding: 0.3rem 0.3rem;
-    color: $white-color;
-    background-color: $darkgrey-color-alpha;
-    transition: all 0.5s ease;
-
-    &:focus,
-    &:hover {
-      color: $darkgrey-color;
-      background-color: $white-color-alpha;
-    }
-  }
-
-  &__navbar {
+  &__list {
+    margin-top: 3rem;
     list-style: none;
   }
+  
+  &__item {
+    margin: 0 0 1rem 1rem;
+
+    &--link {
+      @include nav-color-white;
+    }
+  }
 }
+
+@import 'hamburger';

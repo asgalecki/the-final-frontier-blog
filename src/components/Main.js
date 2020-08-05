@@ -15,8 +15,8 @@ const Main = () => {
             <h1 className="post-card__title">Title</h1>
             <p className="post-card__date">2nd August 2020</p>
             <p className="post-card__tags">
-              <Link className="tags__link" to="./">#Space</Link>, 
-              <Link className="tags__link" to="./">#Sun</Link>, 
+              <Link className="tags__link" to="./">#Space</Link> 
+              <Link className="tags__link" to="./">#Sun</Link>
               <Link className="tags__link" to="./">#Moon</Link>
             </p>
             <p className="post-card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit distinctio quas minima dignissimos, placeat, pariatur repellendus sequi quo quam accusamus iure? Beatae laborum recusandae iusto maxime repellat omnis officiis accusamus...
