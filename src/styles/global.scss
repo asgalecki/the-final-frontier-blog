@@ -16,11 +16,11 @@ body {
   background: url(https://images.unsplash.com/photo-1447433693259-c8549e937d62?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1777&q=80);
 }
 
-@import 'mixins';
-@import 'variables';
-@import 'navbar';
-@import 'header';
-@import 'main';
-@import 'aside';
-@import 'footer';
-@import 'rwd';
+@import './config/mixins';
+@import './config/variables';
+@import './components/navbar';
+@import './components/header';
+@import './components/main';
+@import './components/aside';
+@import './components/footer';
+@import './components/rwd';

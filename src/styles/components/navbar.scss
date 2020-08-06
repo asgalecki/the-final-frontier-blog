@@ -52,6 +52,12 @@
 
     &--link {
       @include nav-color-white;
+      @include transition-basic;
+
+      &:hover,
+      &:focus {
+        @include nav-color-hover
+      }
     }
   }
 }
