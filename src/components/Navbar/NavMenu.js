@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 
 const NavMenu = (props) => {
   return (
-    <div className={props.className}>
+    <div className={props.className} data-testid="navMenu">
       <ul className="nav__list">
         <li className="nav__item"><Link className="nav__item--link" to={`/`}>Home</Link></li>
         <li className="nav__item"><Link className="nav__item--link" to={`/about`}>About</Link></li>
