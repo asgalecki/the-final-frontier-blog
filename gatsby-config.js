@@ -14,5 +14,16 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        useMozJpeg: false,
+        stripMetadata: true,
+        defaultQuality: 75,
+        fluid: {
+          srcSetBreakpoints: [ 280, 360, 575, 767, 991, 1199 ]
+        }
+      },
+    },
   ],
 }

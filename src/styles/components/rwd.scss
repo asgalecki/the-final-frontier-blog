@@ -1,5 +1,9 @@
 @include media-small {
 
+  body {
+    background-image: url(../assets/images/background-stars-768w.jpg);
+  }
+
   .header,
   .footer,
   .nav__container,
@@ -10,6 +14,10 @@
 }
 
 @include media-medium {
+
+  body {
+    background-image: url(../assets/images/background-stars-992w.jpg);
+  }
 
   .header,
   .footer,
@@ -93,6 +101,10 @@
 
 @include media-large {
 
+  body {
+    background-image: url(../assets/images/background-stars-1200w.jpg);
+  }
+
   .header,
   .footer,
   .nav__container,
@@ -123,6 +135,10 @@
 }
 
 @include media-extra-large {
+
+  body {
+    background-image: url(../assets/images/background-stars-1600w.jpg);
+  }
 
   .header,
   .footer,

@@ -13,7 +13,10 @@ html {
 
 body {
   background: rgba(0, 0, 128, 1);
-  background: url(https://images.unsplash.com/photo-1447433693259-c8549e937d62?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1777&q=80);
+  background-image: url(../assets/images/background-stars-540w.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 @import './config/mixins';
