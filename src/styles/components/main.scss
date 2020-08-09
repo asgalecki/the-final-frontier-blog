@@ -7,38 +7,12 @@
   }
 }
 
-.post-card {
-  display: flex;
-  flex-direction: column;
-  border-bottom: 1px solid $darkgrey-color;
-
-  &:last-of-type {
-    border-bottom: none;
-  }
-
-  &__image {
-    margin: 1rem 0;
-  }
+.about,
+.contact {
 
   &__title {
-    margin-top: 0.5rem;
-    line-height: 0.1rem;
-  }
-
-  &__date,
-  &__tag {
-    line-height: 0.1rem;
-    font-size: 16px;
-    margin-bottom: 0;
-  }
-
-  &__tags {
-    margin: 0.5rem 0.2rem 1rem 0;
-  }
-
-  &__link {
-    display: block;
     margin-top: 1rem;
-    text-align: right;
   }
 }
+
+@import './post-card.scss';
