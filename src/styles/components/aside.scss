@@ -17,9 +17,18 @@
   &__post {
     border-bottom: 1px solid $darkgrey-color;
     padding: 0.5rem 0;
+  }
 
-    &--title {
-      margin-bottom: 0;
+  &__link {
+    margin-bottom: 0;
+
+    &:link,
+    &:visited,
+    &:focus,
+    &:hover,
+    &:active {
+      color: $darkgrey-color;
+      text-decoration: none;
     }
   }
 
