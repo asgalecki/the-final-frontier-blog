@@ -15,4 +15,18 @@
   }
 }
 
+.pagination {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+
+  &__button {
+    width: 5rem;
+    margin: 0.1rem;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
+
 @import './post-card.scss';

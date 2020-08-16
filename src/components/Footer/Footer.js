@@ -8,16 +8,16 @@ const Footer = () => {
         <section className="social-media">
           <ul className="social-media__list">
             <li className="social-media__link">
-              <Link className="social-media__link--link" to="/">Github</Link>
+              <a className="social-media__link--link" href="/" target="_blank" rel="noreferrer">Github</a>
             </li>
             <li className="social-media__link">
-              <Link className="social-media__link--link" to="/">Facebook</Link>
+              <a className="social-media__link--link" href="/" target="_blank" rel="noreferrer">Facebook</a>
             </li>
             <li className="social-media__link">
-              <Link className="social-media__link--link" to="/">Twitter</Link>
+              <a className="social-media__link--link" href="/" target="_blank" rel="noreferrer">Twitter</a>
             </li>
             <li className="social-media__link">
-              <Link className="social-media__link--link" to="/">Instagram</Link>
+              <a className="social-media__link--link" href="/" target="_blank" rel="noreferrer">Instagram</a>
             </li>
           </ul>
         </section>

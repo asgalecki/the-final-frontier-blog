@@ -16,16 +16,16 @@ const TagsPage = ({
       <div className="layout__container">
         <Main>
           <div className="main__container">
-          <h1>Tags</h1>
-      <ul>
-        {group.map(tag => (
-          <li key={tag.fieldValue}>
-            <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-              {tag.fieldValue} ({tag.totalCount})
-            </Link>
-          </li>
-        ))}
-      </ul>
+            <h1>Tags</h1>
+            <ul>
+              {group.map(tag => (
+                <li key={tag.fieldValue}>
+                  <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+                    {tag.fieldValue} ({tag.totalCount})
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </Main>
         <Aside />

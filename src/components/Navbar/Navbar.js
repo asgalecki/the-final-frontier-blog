@@ -33,7 +33,7 @@ class Navbar extends React.Component {
     return (
       <nav className="nav">
         <div className="nav__container">
-          <Link className="nav__logo" to={`/`}>The Final Frontier</Link>
+          <Link className="nav__logo" to={`/blog`}>The Final Frontier</Link>
           <Hamburger className={hamburger} onClick={this.handleMenuToggle} />
           <NavMenu className={navMenu} />
         </div>

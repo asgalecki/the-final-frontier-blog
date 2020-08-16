@@ -54,10 +54,10 @@ const Aside = () => {
           <h3 className="links__title">Links</h3>
           <ul className="links__list">
             <li className="links__list--margin">
-              <Link className="links__link" to="https://www.nasa.gov/" target="_blank" rel="noopener">NASA</Link>
+              <a className="links__link" href="https://www.nasa.gov/" target="_blank" rel="noreferrer">NASA</a>
             </li>
             <li className="links__list--margin">
-              <Link className="links__link" to="https://www.esa.int/" target="_blank" rel="noopener">European Space Agency</Link>
+              <a className="links__link" href="https://www.esa.int/" target="_blank" rel="noreferrer">European Space Agency</a>
             </li>
           </ul>
         </section>
