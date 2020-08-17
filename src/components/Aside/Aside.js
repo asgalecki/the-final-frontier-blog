@@ -6,11 +6,16 @@ const Aside = () => {
   const data = useStaticQuery(
     graphql`
       query {
-        allMarkdownRemark {
+        tags: allMarkdownRemark{
           group(field: frontmatter___tags) {
             tag: fieldValue
             totalCount
           }
+        }
+        posts: allMarkdownRemark(
+          sort: { fields: [frontmatter___date], order: DESC }
+          limit: 3
+          ) {
           totalCount
           edges {
             node {
@@ -33,7 +38,7 @@ const Aside = () => {
       <div className="aside__container">
         <section className="recent-posts">
           <h3 className="recent-posts__title">Recent posts</h3>
-          {data.allMarkdownRemark.edges.map(({ node }) => (
+          {data.posts.edges.map(({ node }) => (
             <div className="recent-posts__post" key={node.id}>
               <Link className="recent-posts__link" to={node.fields.slug}>
                 <h4 className="recent-posts__link">{node.frontmatter.title}</h4>
@@ -45,7 +50,7 @@ const Aside = () => {
         <section className="tags">
           <h3 className="tags__title">Tags</h3>
           <p className="tags__paragraph">
-          {data.allMarkdownRemark.group.map(({ tag, totalCount }) => (
+          {data.tags.group.map(({ tag, totalCount }) => (
             <Link className="post-card__tag post-card__tag--margin" to={`/tags/${kebabCase(tag)}/`}>#{tag}({totalCount})</Link>
           ))}
           </p>
