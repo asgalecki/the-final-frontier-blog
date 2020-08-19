@@ -3,15 +3,22 @@
   color: $white-color;
 
   &__container {
-    margin: 0rem 10%;
+    margin: 0rem 1rem;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
   }
+
+  &__links {
+    flex: 0 1 10%;
+  }
 }
 
 .social-media {
-  flex: 0 1 50%;
+
+  &__title {
+    text-decoration-line: underline;
+  }
   
   &__list {
     margin: 0.5rem 0;
@@ -23,13 +30,31 @@
 
   &__link {
     margin: 0 0.5rem 0 0;
+  }
+
+  &__icon {
+    color: $white-color-alpha3;
+    @include transition-basic;
     cursor: pointer;
+    
+    &:focus,
+    &:hover {
+      color: $white-color;
+    }
+
+    &--color {
+      color: $darkgrey-color-alpha2;
+
+      &:focus,
+      &:hover {
+        color: $darkgrey-color;
+      }  
+    }
   }
 }
 
 .inner-links {
-  flex: 0 1 50%;
-  text-align: center;
+  text-align: left;
 
   &__list {
     list-style: none;
@@ -41,22 +66,7 @@
     margin: 0;
     
     &--link {
-        color: $white-color !important;
-    }
-  }
-}
-
-.newsletter {
-  flex: 0 1 100%;
-
-  &__form {
-    margin: 1rem 0;
-  }
-
-  &__input {
-
-    &--cursor {
-      cursor: pointer;
+      color: $white-color;
     }
   }
 }
@@ -68,4 +78,11 @@
   text-align: center;
   margin: 0 auto;
   padding: 0.5rem 0;
+
+  &__link {
+    margin: 0 0.1rem;
+    color: $white-color;
+  }
 }
+
+@import './newsletter-form.scss';

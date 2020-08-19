@@ -1,0 +1,28 @@
+.newsletter {
+  flex: 0 1 50%;
+  font-size: 16px;
+
+  &__form {
+    margin: 1rem 0 0;
+    text-align: right;
+  }
+
+  &__list {
+    list-style: none;
+    margin-bottom: 0;
+  }
+
+  &__element {
+    margin-bottom: 0.5rem;
+  }
+
+  &__button {
+    padding: 0.2rem 0.5rem 0.1rem;
+    cursor: pointer;
+  }
+}
+
+#newsletter__email {
+  padding: 0.1rem;
+  text-indent: 0.1rem;
+}

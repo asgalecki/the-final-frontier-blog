@@ -1,49 +1,52 @@
 import React from 'react';
 import {Link} from 'gatsby';
+import NewsletterForm from '../Forms/NewsletterForm';
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer__container">
-        <section className="social-media">
-          <ul className="social-media__list">
-            <li className="social-media__link">
-              <a className="social-media__link--link" href="/" target="_blank" rel="noreferrer">Github</a>
+        <div className="footer__links">
+
+          <section className="social-media">
+            <ul className="social-media__list">
+              <li className="social-media__link">
+                <a href="https://github.com/ag-vectivus" target="_blank" rel="noreferrer">
+                  <FontAwesomeIcon icon={faGithub} className="social-media__icon" />
+                </a>
+              </li>
+              <li className="social-media__link">
+                <a href="https://pl.linkedin.com/" target="_blank" rel="noreferrer">
+                  <FontAwesomeIcon icon={faLinkedin} className="social-media__icon" />
+                </a>
+              </li>
+            </ul>
+          </section>
+
+          <section className="inner-links">
+          <ul className="inner-links__list">
+            <li className="inner-links__link">
+              <Link className="inner-links__link--link" to="/privacy">Privacy</Link>
             </li>
-            <li className="social-media__link">
-              <a className="social-media__link--link" href="/" target="_blank" rel="noreferrer">Facebook</a>
-            </li>
-            <li className="social-media__link">
-              <a className="social-media__link--link" href="/" target="_blank" rel="noreferrer">Twitter</a>
-            </li>
-            <li className="social-media__link">
-              <a className="social-media__link--link" href="/" target="_blank" rel="noreferrer">Instagram</a>
+            <li className="inner-links__link">
+              <Link className="inner-links__link--link" to="/contact">Contact</Link>
             </li>
           </ul>
-        </section>
+          </section>
 
-        <section className="inner-links">
-        <ul className="inner-links__list">
-          <li className="inner-links__link">
-            <Link className="inner-links__link--link" to="/">Privacy</Link>
-          </li>
-          <li className="inner-links__link">
-            <Link className="inner-links__link--link" to="/contact">Contact</Link>
-          </li>
-        </ul>
-        </section>
-
-        <section className="newsletter">
-          <form className="newsletter__form">
-            <h5 className="newsletter__title">Subscribe to our Newsletter!</h5>
-            <div className="newsletter__input">
-              <label htmlFor="email" className="newsletter__input--cursor">Email: </label>
-              <input type="email" id="email" />
-            </div>
-          </form>
-        </section>
+        </div>
+        <NewsletterForm />
       </div>
-      <div className="site-bottom">Created by ag-vectivus | 2020</div>
+      <div className="site-bottom">
+        Created by
+        <a className="site-bottom__link" href="https://github.com/ag-vectivus" target="_blank" rel="noreferrer">
+          ag-vectivus
+        </a>
+        | 2020
+      </div>
     </footer>
   )
 };
