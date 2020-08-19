@@ -8,6 +8,9 @@ export default function Home() {
     <Layout>
       <div className="layout__container">
         <Main>
+          <div className="main__container">
+            <p className="main__paragraph">Loading content...</p>
+          </div>
         </Main>
         <Aside />
       </div>

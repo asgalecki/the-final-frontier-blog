@@ -52,6 +52,13 @@
   &__form {
     margin: 1rem 0;
   }
+
+  &__input {
+
+    &--cursor {
+      cursor: pointer;
+    }
+  }
 }
 
 .site-bottom {

@@ -5,13 +5,9 @@
     margin: 0 10%;
     padding: 1rem 0;
   }
-}
 
-.about,
-.contact {
-
-  &__title {
-    margin-top: 1rem;
+  &__paragraph {
+    text-align: center;
   }
 }
 
@@ -29,4 +25,13 @@
   }
 }
 
+.about,
+.contact {
+
+  &__title {
+    margin: 1rem 0 3rem;
+  }
+}
+
+@import './contact-form.scss';
 @import './post-card.scss';

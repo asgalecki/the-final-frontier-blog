@@ -28,7 +28,7 @@ const Footer = () => {
             <Link className="inner-links__link--link" to="/">Privacy</Link>
           </li>
           <li className="inner-links__link">
-            <Link className="inner-links__link--link" to="/">Contact</Link>
+            <Link className="inner-links__link--link" to="/contact">Contact</Link>
           </li>
         </ul>
         </section>
@@ -37,7 +37,7 @@ const Footer = () => {
           <form className="newsletter__form">
             <h5 className="newsletter__title">Subscribe to our Newsletter!</h5>
             <div className="newsletter__input">
-              <label htmlFor="email">Email: </label>
+              <label htmlFor="email" className="newsletter__input--cursor">Email: </label>
               <input type="email" id="email" />
             </div>
           </form>

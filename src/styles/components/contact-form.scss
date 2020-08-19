@@ -1,0 +1,38 @@
+.contact-form {
+
+  &__list {
+    list-style: none;
+  }
+
+  &__element {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+
+    &--right {
+      justify-content: flex-end;
+    }
+  }
+
+  &__label {
+    flex: 1 4rem;
+    cursor: pointer;
+  }
+
+  &__button {
+    padding: 0.1rem 0.5rem;
+    cursor: pointer;
+  }
+}
+
+#contact-form {
+  &__name,
+  &__email,
+  &__subject,
+  &__msg {
+    flex: 3 0 11rem;
+    padding: 0.1rem;
+    text-indent: 0.1rem;
+  }
+}
