@@ -13,8 +13,8 @@ const PostCard = ({ posts, tagHeader, children }) => {
           <section className="post-card" key={node.id}>
             <img
               className="post-card__image"
-              src={node.excerptAst.children[0].children[0].properties.src}
-              alt={node.excerptAst.children[0].children[0].properties.alt}
+              src={node.excerptAst.children[0].children[1].properties.src}
+              alt={node.excerptAst.children[0].children[1].properties.alt}
             />
             <article className="post-card__details">
               <Link className="post-card__title" to={node.fields.slug}>

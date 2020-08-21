@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'gatsby';
+import { Link } from 'gatsby';
 import NewsletterForm from '../Forms/NewsletterForm';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

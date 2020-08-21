@@ -69,3 +69,11 @@ yarn-error.log
 .yarn-integrity
 
 src/components/__snapshots__/
+
+src/pages/test1.md
+src/pages/test2.md
+src/pages/test3.md
+src/pages/test4.md
+src/pages/mission-mars.md
+src/pages/space-weather.md
+src/pages/sun-spot.md

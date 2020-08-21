@@ -1,0 +1,43 @@
+.not-found {
+
+  &__container {
+    color: $white-color;
+    background: $darkgrey-color-alpha2;
+    padding-bottom: 70vh;
+    text-align: center;
+    z-index: 1;
+  }
+
+  &__title {
+    position: relative;
+    top: 10vh;
+    font-size: 4rem;
+    z-index: 2;
+  }
+
+  &__paragraph {
+    position: relative;
+    top: 30vh;
+    font-size: 1.5rem;
+    z-index: 2;
+  }
+
+  &__link {
+    position: relative;
+    top: 50vh;
+    font-size: 1.5rem;
+    color: $orange-color;
+    z-index: 2;
+
+    &:link,
+    &:visited,
+    &:active {
+      color: $orange-color;
+    }
+
+    &:focus,
+    &:hover {
+      color: $white-color;
+    }
+  }
+}

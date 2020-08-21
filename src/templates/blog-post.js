@@ -1,12 +1,14 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { Link, graphql } from 'gatsby';
+import kebabCase from 'lodash/kebabCase';
+
 import Layout from '../components/layout';
 import Main from '../components/Main/Main';
 import Aside from '../components/Aside/Aside';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { faFacebook, faTwitter, faFacebookMessenger } from "@fortawesome/free-brands-svg-icons";
+import { faFacebook, faTwitter } from "@fortawesome/free-brands-svg-icons";
 
 export default function BlogPost({ data }) {
   const post = data.markdownRemark;
@@ -16,28 +18,29 @@ export default function BlogPost({ data }) {
         <Main>
           <div className="main__container">
             <h1>{post.frontmatter.title}</h1>
+            <p className="post-card__date post-card__date--right">{post.frontmatter.date}</p>
+            <p className="post-card__tags post-card__tags--right">
+              {post.frontmatter.tags.map(tag => (
+                <Link className="post-card__tag post-card__tag--margin-left" to={`/tags/${kebabCase(tag)}/`}>#{tag}</Link>
+              ))}
+            </p>
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
             {/* Social media style is located in footer.scss */}
             <h6 className="social-media__title">Share this post:</h6>
             <ul className="social-media__list">
               <li className="social-media__link">
-                <a href="/" target="_blank" rel="noreferrer">
+                <a href={`mailto:?subject=${post.frontmatter.title} - See this article&amp&body=Check out this site http://localhost:8000${post.fields.slug}`} title="Share by Email" target="_blank" rel="noreferrer">
                   <FontAwesomeIcon icon={faEnvelope} className="social-media__icon social-media__icon--color" />
                 </a>
               </li>
               <li className="social-media__link">
-                <a href="/" target="_blank" rel="noreferrer">
+                <a href={`https://www.facebook.com/sharer/sharer.php?u=http://localhost:8000${post.fields.slug}`} target="_blank" rel="noreferrer">
                   <FontAwesomeIcon icon={faFacebook} className="social-media__icon social-media__icon--color" />
                 </a>
               </li>
               <li className="social-media__link">
-                <a href="/" target="_blank" rel="noreferrer">
+                <a href={`https://twitter.com/intent/tweet/?text=${post.frontmatter.title}&url=http://localhost:8000${post.fields.slug}%2F&via=localhost`} target="_blank" rel="noreferrer">
                   <FontAwesomeIcon icon={faTwitter} className="social-media__icon social-media__icon--color" />
-                </a>
-              </li>
-              <li className="social-media__link">
-                <a href="/" target="_blank" rel="noreferrer">
-                  <FontAwesomeIcon icon={faFacebookMessenger} className="social-media__icon social-media__icon--color" />
                 </a>
               </li>
             </ul>
@@ -55,6 +58,11 @@ export const query = graphql`
       html
       frontmatter {
         title
+        date(formatString: "DD MMMM YYYY")
+        tags
+      }
+      fields {
+        slug
       }
     }
   }

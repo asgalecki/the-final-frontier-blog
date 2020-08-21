@@ -1,7 +1,6 @@
 import React from 'react';
 import Layout from '../components/Layout';
 import Main from '../components/Main/Main';
-import Aside from '../components/Aside/Aside';
 import ContactForm from '../components/Forms/ContactForm';
 
 export default function Home() {
@@ -14,7 +13,6 @@ export default function Home() {
             <ContactForm />
           </div>
         </Main>
-        <Aside />
       </div>
     </Layout>
   )

@@ -34,5 +34,21 @@
   }
 }
 
+.privacy {
+
+  &__title {
+    margin: 1rem 0;
+  }
+
+  &__paragraph {
+    font-size: 16px;
+    margin-bottom: 0.5rem;
+  }
+
+  &__list {
+    font-size: 16px;
+  }
+}
+
 @import './contact-form.scss';
 @import './post-card.scss';
