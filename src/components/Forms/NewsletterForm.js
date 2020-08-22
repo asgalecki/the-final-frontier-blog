@@ -30,8 +30,8 @@ export default class NewsletterForm extends React.Component {
                 name="newsletter-email" 
                 id="newsletter__email"
                 required
-                minlength="6" 
-                maxlength="50"
+                minLength="6" 
+                maxLength="50"
                 aria-label="Email"
                 placeholder="Email"
                 value={this.state.email}

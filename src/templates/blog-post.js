@@ -1,19 +1,22 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
 import kebabCase from 'lodash/kebabCase';
 
 import Layout from '../components/layout';
 import Main from '../components/Main/Main';
 import Aside from '../components/Aside/Aside';
+import SEO from "../components/Seo";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faFacebook, faTwitter } from "@fortawesome/free-brands-svg-icons";
 
-export default function BlogPost({ data }) {
+const BlogPost = ({ data }) => {
   const post = data.markdownRemark;
   return (
     <Layout>
+      <SEO title={post.frontmatter.title} description={post.excerpt} />
       <div className="layout__container">
         <Main>
           <div className="main__container">
@@ -21,7 +24,7 @@ export default function BlogPost({ data }) {
             <p className="post-card__date post-card__date--right">{post.frontmatter.date}</p>
             <p className="post-card__tags post-card__tags--right">
               {post.frontmatter.tags.map(tag => (
-                <Link className="post-card__tag post-card__tag--margin-left" to={`/tags/${kebabCase(tag)}/`}>#{tag}</Link>
+                <Link className="post-card__tag post-card__tag--margin-left" to={`/tags/${kebabCase(tag)}/`} key={`tag-${tag}`}>#{tag}</Link>
               ))}
             </p>
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
@@ -52,6 +55,25 @@ export default function BlogPost({ data }) {
   )
 }
 
+BlogPost.propTypes = {
+  data: PropTypes.shape({
+    markdownRemark: PropTypes.shape({
+      html: PropTypes.string.isRequired,
+      frontmatter: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        date: PropTypes.string.isRequired,
+        tags: PropTypes.arrayOf(PropTypes.string.isRequired)
+      }),
+      fields: PropTypes.shape({
+        slug: PropTypes.string.isRequired,
+      }),
+      excerpt: PropTypes.string.isRequired,
+    }),
+  }),
+}
+
+export default BlogPost;
+
 export const query = graphql`
   query($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
@@ -64,6 +86,7 @@ export const query = graphql`
       fields {
         slug
       }
+      excerpt
     }
   }
 `

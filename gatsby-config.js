@@ -1,11 +1,26 @@
 module.exports = {
   siteMetadata: {
-    title: "The Final Frontier",
-    description: "Astronomy Blog",
-    author: "Artur Gałecki"
+    title: `The Final Frontier`,
+    description: `Blog about the space, astronomy and science.`,
+    author: `Artur Gałecki`
   },
   plugins: [
-    'gatsby-plugin-resolve-src',
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `The Final Frontier`,
+        short_name: `The Final Frontier`,
+        start_url: `/`,
+        background_color: `#000000`,
+        theme_color: `#000000`,
+        display: `standalone`,
+        icon: `src/assets/images/favicon.png`,
+      },
+    },
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-remark`,
+    `gatsby-plugin-resolve-src`,
     `gatsby-plugin-postcss`,
     `gatsby-plugin-sass`,
     {
@@ -15,7 +30,6 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
-    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {

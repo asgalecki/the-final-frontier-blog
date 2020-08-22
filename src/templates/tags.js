@@ -1,5 +1,5 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { graphql, Link } from 'gatsby';
 import kebabCase from 'lodash/kebabCase';
 
@@ -7,6 +7,7 @@ import Layout from '../components/layout';
 import Main from '../components/Main/Main';
 import Aside from '../components/Aside/Aside';
 import PostCard from '../components/Main/PostCard';
+import SEO from "../components/Seo";
 
 const Tags = ({ pageContext, data }) => {
 
@@ -24,6 +25,7 @@ const Tags = ({ pageContext, data }) => {
 
   return (
     <Layout>
+      <SEO title={tagHeader} description={tagHeader} />
       <div className="layout__container">
         <Main>
           <PostCard posts={edges} tagHeader={tagHeader}>
@@ -47,28 +49,33 @@ const Tags = ({ pageContext, data }) => {
   )
 }
 
-// Tags.propTypes = {
-//   pageContext: PropTypes.shape({
-//     tag: PropTypes.string.isRequired,
-//   }),
-//   data: PropTypes.shape({
-//     allMarkdownRemark: PropTypes.shape({
-//       totalCount: PropTypes.number.isRequired,
-//       edges: PropTypes.arrayOf(
-//         PropTypes.shape({
-//           node: PropTypes.shape({
-//             frontmatter: PropTypes.shape({
-//               title: PropTypes.string.isRequired,
-//             }),
-//             fields: PropTypes.shape({
-//               slug: PropTypes.string.isRequired,
-//             }),
-//           }),
-//         }).isRequired
-//       ),
-//     }),
-//   }),
-// }
+Tags.propTypes = {
+  pageContext: PropTypes.shape({
+    tag: PropTypes.string.isRequired,
+  }),
+  data: PropTypes.shape({
+    allMarkdownRemark: PropTypes.shape({
+      totalCount: PropTypes.number.isRequired,
+      edges: PropTypes.arrayOf(
+        PropTypes.shape({
+          node: PropTypes.shape({
+            id: PropTypes.string.isRequired,
+            frontmatter: PropTypes.shape({
+              title: PropTypes.string.isRequired,
+              date: PropTypes.string.isRequired,
+              tags: PropTypes.arrayOf(PropTypes.string.isRequired)
+            }),
+            fields: PropTypes.shape({
+              slug: PropTypes.string.isRequired,
+            }),
+            excerpt: PropTypes.string.isRequired,
+            excerptAst: PropTypes.node.isRequired
+          }),
+        }).isRequired
+      ),
+    }),
+  }),
+}
 
 export default Tags;
 

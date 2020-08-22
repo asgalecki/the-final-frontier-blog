@@ -9,6 +9,10 @@
 
   &__image {
     margin: 1rem 0 0;
+
+    &--margin {
+      margin-bottom: 0;
+    }
   }
 
   &__figcaption {

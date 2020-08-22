@@ -9,7 +9,7 @@ export default function Home() {
         <Main>
           <div className="main__container">
             <h1 className="about__title">About</h1>
-            <p className="about__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, cumque rem qui beatae maxime odio laborum magni, expedita iure consectetur animi unde? Itaque facere adipisci dolore quae totam aliquid, distinctio possimus eaque debitis eius tempora labore cumque voluptatum quos perspiciatis quam repellat officiis. Nam commodi repudiandae illo laboriosam, quaerat exercitationem.</p>
+            <p className="about__paragraph">Blog about the space, astronomy and science. This website was created as a part of my 'front-end' portfolio.</p>
           </div>
         </Main>
       </div>

@@ -41,8 +41,8 @@ export default class ContactForm extends React.Component {
               name="name"
               id="contact-form__name"
               required
-              minlength="2"
-              maxlength="50"
+              minLength="2"
+              maxLength="50"
               placeholder="Name"
               value={this.state.name}
               onChange={this.handleInputChange}
@@ -57,8 +57,8 @@ export default class ContactForm extends React.Component {
               name="email"
               id="contact-form__email"
               required
-              minlength="6" 
-              maxlength="50"
+              minLength="6" 
+              maxLength="50"
               placeholder="Email"
               value={this.state.email}
               onChange={this.handleInputChange}
@@ -73,8 +73,8 @@ export default class ContactForm extends React.Component {
               name="subject"
               id="contact-form__subject"
               required
-              minlength="2"
-              maxlength="100"
+              minLength="2"
+              maxLength="100"
               placeholder="Subject"
               value={this.state.subject}
               onChange={this.handleInputChange}
@@ -89,8 +89,8 @@ export default class ContactForm extends React.Component {
               id="contact-form__msg"
               required
               rows="5"
-              minlength="2"
-              maxlength="500"
+              minLength="2"
+              maxLength="500"
               placeholder="Enter your message..."
               value={this.state.message}
               onChange={this.handleInputChange}

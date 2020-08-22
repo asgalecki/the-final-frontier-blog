@@ -1,10 +1,12 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import { graphql, Link } from "gatsby";
 
 import Layout from "../components/Layout";
 import Main from '../components/Main/Main';
 import Aside from '../components/Aside/Aside';
 import PostCard from '../components/Main/PostCard';
+import SEO from "../components/Seo";
 
 const BlogList = ({ pageContext, data }) => {
   
@@ -17,6 +19,7 @@ const BlogList = ({ pageContext, data }) => {
 
   return (
     <Layout>
+      <SEO title={`Blog`} description={`Blog about the space, astronomy and science.`} />
       <div className="layout__container">
         <Main>
           <PostCard posts={edges}>
@@ -38,6 +41,31 @@ const BlogList = ({ pageContext, data }) => {
       </div>
     </Layout>
   )
+}
+
+BlogList.propTypes = {
+  data: PropTypes.shape({
+    allMarkdownRemark: PropTypes.shape({
+      totalCount: PropTypes.number.isRequired,
+      edges: PropTypes.arrayOf(
+        PropTypes.shape({
+          node: PropTypes.shape({
+            id: PropTypes.string.isRequired,
+            frontmatter: PropTypes.shape({
+              title: PropTypes.string.isRequired,
+              date: PropTypes.string.isRequired,
+              tags: PropTypes.arrayOf(PropTypes.string.isRequired)
+            }),
+            fields: PropTypes.shape({
+              slug: PropTypes.string.isRequired,
+            }),
+            excerpt: PropTypes.node.isRequired,
+            excerptAst: PropTypes.any.isRequired
+          }),
+        }).isRequired
+      ),
+    }),
+  }),
 }
 
 export default BlogList;
