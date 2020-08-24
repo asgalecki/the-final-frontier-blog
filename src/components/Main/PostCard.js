@@ -11,12 +11,12 @@ const PostCard = ({ posts, tagHeader, children }) => {
       <div className="post-card__container">
         {posts.map(({ node }) => (
           <section className="post-card" key={node.id}>
-            <div className="post-card__image">
+            {/* <div className="post-card__image">
               <img className="post-card__image--margin"
                 src={node.excerptAst.children[0].children[1].properties.src}
                 alt={node.excerptAst.children[0].children[1].properties.alt}
               />
-            </div>
+            </div> */}
             <article className="post-card__details">
               <Link className="post-card__title" to={node.fields.slug}>
                 <h1 className="post-card__title">{node.frontmatter.title}</h1>

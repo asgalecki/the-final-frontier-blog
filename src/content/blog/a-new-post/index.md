@@ -1,7 +1,7 @@
 ---
-title: A new post
+title: Aurora Borealis
 date: 2020-08-24T11:17:51.698Z
-tags: ["sun", "lol"]
+tags: ["sun", "space weather", exploration]
 ---
 <figure>
   <img src="https://images.unsplash.com/photo-1447433865958-f402f562b843?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1952&q=80"
