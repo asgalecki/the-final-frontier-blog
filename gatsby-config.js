@@ -20,6 +20,7 @@ module.exports = {
         },
       },
     },
+    `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-remark`,
