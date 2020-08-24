@@ -9,6 +9,12 @@
   &__title {
     color: $white-color;
     text-shadow: 3px 3px $darkgrey-color-alpha;
+    font-size: 1.6rem;
+    font-weight: bold;
+
+    &--size {
+      font-size: 1.1rem;
+    }
 
     &--align {
       text-align: right;
