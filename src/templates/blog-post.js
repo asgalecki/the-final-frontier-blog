@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
 import kebabCase from 'lodash/kebabCase';
 
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 import Main from '../components/Main/Main';
 import Aside from '../components/Aside/Aside';
 import SEO from "../components/Seo";
