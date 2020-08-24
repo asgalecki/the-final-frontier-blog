@@ -27,6 +27,13 @@ const BlogPost = ({ data }) => {
                 <Link className="post-card__tag post-card__tag--margin-left" to={`/tags/${kebabCase(tag)}/`} key={`tag-${tag}`}>#{tag}</Link>
               ))}
             </p>
+            {console.log(post.frontmatter)}
+            <div className="post-card__image">
+              <img className="post-card__image--margin"
+                src={post.frontmatter.thumbnail.absolutePath}
+                alt=""
+              />
+            </div>
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
             {/* Social media style is located in footer.scss */}
             <h6 className="social-media__title">Share this post:</h6>
@@ -55,22 +62,22 @@ const BlogPost = ({ data }) => {
   )
 }
 
-BlogPost.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.shape({
-      html: PropTypes.string.isRequired,
-      frontmatter: PropTypes.shape({
-        title: PropTypes.string.isRequired,
-        date: PropTypes.string.isRequired,
-        tags: PropTypes.arrayOf(PropTypes.string.isRequired)
-      }),
-      fields: PropTypes.shape({
-        slug: PropTypes.string.isRequired,
-      }),
-      excerpt: PropTypes.string.isRequired,
-    }),
-  }),
-}
+// BlogPost.propTypes = {
+//   data: PropTypes.shape({
+//     markdownRemark: PropTypes.shape({
+//       html: PropTypes.string.isRequired,
+//       frontmatter: PropTypes.shape({
+//         title: PropTypes.string.isRequired,
+//         date: PropTypes.string.isRequired,
+//         tags: PropTypes.arrayOf(PropTypes.string.isRequired)
+//       }),
+//       fields: PropTypes.shape({
+//         slug: PropTypes.string.isRequired,
+//       }),
+//       excerpt: PropTypes.string.isRequired,
+//     }),
+//   }),
+// }
 
 export default BlogPost;
 
@@ -82,6 +89,9 @@ export const query = graphql`
         title
         date(formatString: "DD MMMM YYYY")
         tags
+        thumbnail {
+          absolutePath
+        }
       }
       fields {
         slug
