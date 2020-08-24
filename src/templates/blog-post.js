@@ -32,7 +32,7 @@ const BlogPost = ({ data }) => {
             <h6 className="social-media__title">Share this post:</h6>
             <ul className="social-media__list">
               <li className="social-media__link">
-                <a href={`mailto:?subject=${post.frontmatter.title} - See this article&amp&body=Check out this site http://localhost:8000${post.fields.slug}`} title="Share by Email" target="_blank" rel="noreferrer">
+                <a href={`mailto:?subject=${post.frontmatter.title} - See this article&amp&body=Check out this site https://the-final-frontier${post.fields.slug}`} title="Share by Email" target="_blank" rel="noreferrer">
                   <FontAwesomeIcon icon={faEnvelope} className="social-media__icon social-media__icon--color" />
                 </a>
               </li>
