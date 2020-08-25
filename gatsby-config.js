@@ -1,3 +1,10 @@
+var netlifyCmsPaths = {
+  resolve: `gatsby-plugin-netlify-cms-paths`,
+  options: {
+    cmsConfig: `/static/admin/config.yml`,
+  },
+}
+
 module.exports = {
   siteMetadata: {
     title: `The Final Frontier`,
@@ -20,13 +27,31 @@ module.exports = {
         },
       },
     },
-    `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-transformer-remark`,
     `gatsby-plugin-resolve-src`,
     `gatsby-plugin-postcss`,
     `gatsby-plugin-sass`,
+    `gatsby-plugin-netlify-cms`,
+    `gatsby-plugin-netlify-cms-paths`,
+    `gatsby-transformer-remark`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          netlifyCmsPaths,
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+              backgroundColor: 'transparent',
+            },
+          },
+        ],
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -40,16 +65,6 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
-    {
-      resolve: `gatsby-plugin-sharp`,
-      options: {
-        useMozJpeg: false,
-        stripMetadata: true,
-        defaultQuality: 75,
-        fluid: {
-          srcSetBreakpoints: [ 280, 360, 575, 767, 991, 1199 ]
-        }
-      },
-    },
+    `gatsby-plugin-netlify`,
   ],
 }

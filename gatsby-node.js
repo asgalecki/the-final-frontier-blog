@@ -52,7 +52,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // Redirect from index to ./blog
   createRedirect({
     fromPath: `/`,
-    toPath: `/blog`,
+    toPath: `/blog/`,
     redirectInBrowser: true,
     isPermanent: true,
   });

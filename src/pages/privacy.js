@@ -15,8 +15,7 @@ export default function Home() {
               <p className="privacy__paragraph">This document can be printed for reference by using the print command in the settings of any browser.</p>
 
             <h3 className="privacy__title">Owner and Data Controller</h3>
-              <p className="privacy__paragraph">ag-vectivus</p>
-              <p className="privacy__paragraph">Owner contact email: test@test.com</p>
+              <p className="privacy__paragraph">Artur Gałecki</p>
 
             <h3 className="privacy__title">Types of Data collected</h3>
               <p className="privacy__paragraph">

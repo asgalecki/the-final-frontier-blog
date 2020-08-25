@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import kebabCase from 'lodash/kebabCase';
+import Img from 'gatsby-image';
 
 const PostCard = ({ posts, tagHeader, children }) => {
   return (
@@ -12,10 +13,7 @@ const PostCard = ({ posts, tagHeader, children }) => {
         {posts.map(({ node }) => (
           <section className="post-card" key={node.id}>
             <div className="post-card__image">
-              <img className="post-card__image--margin"
-                src={node.frontmatter.thumbnail.absolutePath}
-                alt=""
-              />
+              <Img className="post-card__image" fluid={node.frontmatter.thumbnail.childImageSharp.fluid} />
             </div>
             <article className="post-card__details">
               <Link className="post-card__title" to={node.fields.slug}>

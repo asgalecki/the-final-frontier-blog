@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
 import kebabCase from 'lodash/kebabCase';
+import Img from 'gatsby-image';
 
 import Layout from '../components/Layout';
 import Main from '../components/Main/Main';
@@ -27,12 +28,8 @@ const BlogPost = ({ data }) => {
                 <Link className="post-card__tag post-card__tag--margin-left" to={`/tags/${kebabCase(tag)}/`} key={`tag-${tag}`}>#{tag}</Link>
               ))}
             </p>
-            {console.log(post.frontmatter)}
             <div className="post-card__image">
-              <img className="post-card__image--margin"
-                src={post.frontmatter.thumbnail.absolutePath}
-                alt=""
-              />
+              <Img className="post-card__image--margin" fluid={post.frontmatter.thumbnail.childImageSharp.fluid} />
             </div>
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
             {/* Social media style is located in footer.scss */}
@@ -44,12 +41,12 @@ const BlogPost = ({ data }) => {
                 </a>
               </li>
               <li className="social-media__link">
-                <a href={`https://www.facebook.com/sharer/sharer.php?u=http://localhost:8000${post.fields.slug}`} target="_blank" rel="noreferrer">
+                <a href={`https://www.facebook.com/sharer/sharer.php?u=https://the-final-frontier.netlify.app/${post.fields.slug}`} target="_blank" rel="noreferrer">
                   <FontAwesomeIcon icon={faFacebook} className="social-media__icon social-media__icon--color" />
                 </a>
               </li>
               <li className="social-media__link">
-                <a href={`https://twitter.com/intent/tweet/?text=${post.frontmatter.title}&url=http://localhost:8000${post.fields.slug}%2F&via=localhost`} target="_blank" rel="noreferrer">
+                <a href={`https://twitter.com/intent/tweet/?text=${post.frontmatter.title}&url=https://the-final-frontier.netlify.app/${post.fields.slug}%2F&via=the-final-frontier`} target="_blank" rel="noreferrer">
                   <FontAwesomeIcon icon={faTwitter} className="social-media__icon social-media__icon--color" />
                 </a>
               </li>
@@ -90,7 +87,11 @@ export const query = graphql`
         date(formatString: "DD MMMM YYYY")
         tags
         thumbnail {
-          absolutePath
+          childImageSharp {
+            fluid(maxWidth: 590) {
+                ...GatsbyImageSharpFluid
+            }
+          }
         }
       }
       fields {

@@ -95,6 +95,13 @@ export const query = graphql`
             title
             date(formatString: "DD MMMM YYYY")
             tags
+            thumbnail {
+              childImageSharp {
+                fluid(maxWidth: 590) {
+                    ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
           fields {
             slug
