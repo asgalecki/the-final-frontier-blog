@@ -10,7 +10,6 @@ import Aside from '../components/Aside/Aside';
 import SEO from "../components/Seo";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faFacebook, faTwitter } from "@fortawesome/free-brands-svg-icons";
 
 const BlogPost = ({ data }) => {
@@ -36,17 +35,12 @@ const BlogPost = ({ data }) => {
             <h6 className="social-media__title">Share this post:</h6>
             <ul className="social-media__list">
               <li className="social-media__link">
-                <a href={`mailto:?subject=${post.frontmatter.title} - See this article&amp&body=Check out this site https://the-final-frontier${post.fields.slug}`} title="Share by Email" target="_blank" rel="noreferrer">
-                  <FontAwesomeIcon icon={faEnvelope} className="social-media__icon social-media__icon--color" />
-                </a>
-              </li>
-              <li className="social-media__link">
                 <a href={`https://www.facebook.com/sharer/sharer.php?u=https://the-final-frontier.netlify.app/${post.fields.slug}`} target="_blank" rel="noreferrer">
                   <FontAwesomeIcon icon={faFacebook} className="social-media__icon social-media__icon--color" />
                 </a>
               </li>
               <li className="social-media__link">
-                <a href={`https://twitter.com/intent/tweet/?text=${post.frontmatter.title}&url=https://the-final-frontier.netlify.app/${post.fields.slug}%2F&via=the-final-frontier`} target="_blank" rel="noreferrer">
+                <a href={`https://twitter.com/intent/tweet/?text=${post.frontmatter.title}&url=https://the-final-frontier.netlify.app${post.fields.slug}`} target="_blank" rel="noreferrer">
                   <FontAwesomeIcon icon={faTwitter} className="social-media__icon social-media__icon--color" />
                 </a>
               </li>

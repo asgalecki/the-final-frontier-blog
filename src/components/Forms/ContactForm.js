@@ -20,17 +20,19 @@ export default class ContactForm extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    alert(`
-          Name: ${this.state.name},
-          Email: ${this.state.email},
-          Subject: ${this.state.subject},
-          Text: ${this.state.message}
-          `);
+    // alert(`
+    //       Name: ${this.state.name},
+    //       Email: ${this.state.email},
+    //       Subject: ${this.state.subject},
+    //       Text: ${this.state.message}
+    //       `);
   }
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit} className="contact-form" action="#" method="post">
+      <form onSubmit={this.handleSubmit} className="contact-form" netlify-honeypot="bot-field" method="post" data-netlify="true" name="Contact Form">
+        <input type="hidden" name="bot-field" />
+        <input type="hidden" name="form-name" value="Contact Form" />
         <ul className="contact-form__list">
           <li className="contact-form__element">
             <label for="contact-form__name" className="contact-form__label">
