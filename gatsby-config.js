@@ -65,6 +65,13 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
+    {
+      resolve: 'gatsby-plugin-mailchimp',
+      options: {
+          endpoint: 'https://gmail.us17.list-manage.com/subscribe/post?u=cde335b3177e89b07f11e2059&amp;id=bc7c67b4c2',
+          timeout: 5000,
+      },
+    },
     `gatsby-plugin-netlify`,
   ],
 }
