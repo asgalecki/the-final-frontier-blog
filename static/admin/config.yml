@@ -3,7 +3,7 @@ backend:
   branch: master
 
 media_folder: static/images
-public_folder: /images
+public_folder: static/images
 
 collections:
   - name: 'The Final Frontier Blog'
@@ -39,16 +39,6 @@ collections:
           media_library: {
             config: {
               multiple: false
-            }
-          }
-        }
-      - { 
-          label: 'Images', 
-          name: 'images',
-          widget: 'image',
-          media_library: {
-            config: {
-              multiple: true
             }
           }
         }
