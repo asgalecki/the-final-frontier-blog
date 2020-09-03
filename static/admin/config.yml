@@ -3,7 +3,7 @@ backend:
   branch: master
 
 media_folder: src/assets/images
-public_folder: src/assets/images/upload
+public_folder: src/assets/images
 
 collections:
   - name: 'The Final Frontier Blog'
