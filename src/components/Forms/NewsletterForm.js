@@ -1,4 +1,5 @@
-import React from "react";
+import React from 'react';
+import addToMailchimp from 'gatsby-plugin-mailchimp';
 
 export default class NewsletterForm extends React.Component {
   state = {
@@ -11,17 +12,27 @@ export default class NewsletterForm extends React.Component {
     this.setState({
       email: value
     });
-  }
+  };
 
-  handleSubmit = event => {
-    event.preventDefault();
-    alert("You have been successfully subscribed to our newsletter!");
-  }
+  handleSubmit = e => {
+    e.preventDefault()
+
+    addToMailchimp(this.state.email, this.state)
+      .then(({ msg, result }) => {
+        if (result !== 'success') {
+          throw msg
+        };
+        alert("You have been successfully subscribed to our newsletter!");
+      })
+      .catch(err => {
+        alert("It seems that something went wrong...");
+      })
+  };
 
   render() {
     return (
       <section className="newsletter">
-        <form className="newsletter__form" onSubmit={this.handleSubmit} action="#" method="post">
+        <form className="newsletter__form" onSubmit={this.handleSubmit}>
           <h6 className="newsletter__title">Subscribe to our Newsletter!</h6>
           <ul className="newsletter__list">
             <li className="newsletter__element">
