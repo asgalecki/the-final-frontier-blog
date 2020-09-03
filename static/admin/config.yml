@@ -2,8 +2,8 @@ backend:
   name: git-gateway
   branch: master
 
-media_folder: src/assets/images
-public_folder: src/assets/images/upload
+media_folder: static/images
+public_folder: /images
 
 collections:
   - name: 'The Final Frontier Blog'
@@ -39,6 +39,16 @@ collections:
           media_library: {
             config: {
               multiple: false
+            }
+          }
+        }
+      - { 
+          label: 'Images', 
+          name: 'images',
+          widget: 'image',
+          media_library: {
+            config: {
+              multiple: true
             }
           }
         }
