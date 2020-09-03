@@ -32,6 +32,13 @@ module.exports = {
     `gatsby-plugin-resolve-src`,
     `gatsby-plugin-postcss`,
     `gatsby-plugin-sass`,
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/static/images`,
+        name: 'images',
+      },
+    },
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-netlify-cms-paths`,
     `gatsby-transformer-remark`,
