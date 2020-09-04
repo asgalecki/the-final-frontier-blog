@@ -2,8 +2,8 @@ backend:
   name: git-gateway
   branch: master
 
-media_folder: src/assets/images
-public_folder: src/assets/images
+media_folder: static/images
+public_folder: /images
 
 collections:
   - name: 'The Final Frontier Blog'
@@ -11,8 +11,6 @@ collections:
     folder: 'src/content/blog'
     create: true
     slug: 'index'
-    media_folder: ''
-    public_folder: ''
     path: '{{title}}/index'
     editor:
       preview: false
