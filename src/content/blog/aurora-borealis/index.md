@@ -5,7 +5,7 @@ tags:
   - sun
   - space weather
   - exploration
-thumbnail: nasa1.jpg
+thumbnail: images/nasa1.jpg
 ---
 
 
