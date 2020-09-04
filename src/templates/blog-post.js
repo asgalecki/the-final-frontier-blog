@@ -28,7 +28,11 @@ const BlogPost = ({ data }) => {
               ))}
             </p>
             <div className="post-card__image">
-              <Img className="post-card__image--margin" fluid={post.frontmatter.thumbnail.childImageSharp.fluid} />
+              <Img 
+                className="post-card__image--margin"
+                fluid={post.frontmatter.thumbnail[0].src.childImageSharp.fluid} 
+                alt={post.frontmatter.thumbnail[1].alt}
+              />
             </div>
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
             {/* Social media style is located in footer.scss */}
@@ -81,9 +85,12 @@ export const query = graphql`
         date(formatString: "DD MMMM YYYY")
         tags
         thumbnail {
-          childImageSharp {
-            fluid(maxWidth: 590) {
+          alt
+          src {
+            childImageSharp {
+              fluid(maxWidth: 590) {
                 ...GatsbyImageSharpFluid
+              }
             }
           }
         }

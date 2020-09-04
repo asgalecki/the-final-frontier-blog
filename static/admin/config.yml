@@ -2,7 +2,7 @@ backend:
   name: git-gateway
   branch: master
 
-media_folder: static/images
+media_folder: src/assets/images
 public_folder: /images
 
 collections:
@@ -11,6 +11,8 @@ collections:
     folder: 'src/content/blog'
     create: true
     slug: 'index'
+    media_folder: ''
+    public_folder: ''
     path: '{{title}}/index'
     editor:
       preview: false
@@ -30,13 +32,32 @@ collections:
           name: 'tags', 
           widget: 'list' 
         }
+      - label: 'Post Image' 
+        name: 'thumbnail'
+        widget: 'object'
+        fields:
+          - {
+              name: 'src', 
+              label: 'Image', 
+              widget: 'image',
+              media_library: {
+                config: {
+                  multiple: false
+                }
+              }
+            }
+          - {
+              name: 'alt', 
+              label: 'Alt text', 
+              widget: 'string'
+            }
       - { 
-          label: 'Post Image', 
-          name: 'thumbnail',
+          label: 'Images', 
+          name: 'images',
           widget: 'image',
           media_library: {
             config: {
-              multiple: false
+              multiple: true
             }
           }
         }
