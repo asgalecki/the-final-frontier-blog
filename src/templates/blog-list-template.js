@@ -86,12 +86,9 @@ export const query = graphql`
             date(formatString: "DD MMMM YYYY")
             tags
             thumbnail {
-              alt
-              src {
-                childImageSharp {
-                  fluid(maxWidth: 590) {
-                    ...GatsbyImageSharpFluid
-                  }
+              childImageSharp {
+                fluid(maxWidth: 590) {
+                  ...GatsbyImageSharpFluid
                 }
               }
             }

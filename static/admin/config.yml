@@ -32,29 +32,21 @@ collections:
           name: 'tags', 
           widget: 'list' 
         }
-      - label: 'Post Image' 
-        name: 'thumbnail'
-        widget: 'object'
-        fields:
-          - {
-              name: 'src', 
-              label: 'Image', 
-              widget: 'image',
-              media_library: {
-                config: {
-                  multiple: false
-                }
-              }
+      - {
+          label: 'Post Image', 
+          name: 'thumbnail',
+          widget: 'object',
+          media_library: {
+            config: {
+              multiple: false
             }
-          - {
-              name: 'alt', 
-              label: 'Alt text', 
-              widget: 'string'
-            }
+          }
+        }
       - { 
           label: 'Images', 
           name: 'images',
           widget: 'image',
+          required: false,
           media_library: {
             config: {
               multiple: true

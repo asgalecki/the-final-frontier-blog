@@ -5,9 +5,7 @@ tags:
   - sun
   - space weather
   - exploration
-thumbnail: 
-  - src: nasa4.jpg
-  - alt: random image from NASA
+thumbnail: nasa4.jpg
 ---
 
 

@@ -15,8 +15,8 @@ const PostCard = ({ posts, tagHeader, children }) => {
             <div className="post-card__image">
               <Img 
                 className="post-card__image" 
-                fluid={node.frontmatter.thumbnail[0].src.childImageSharp.fluid} 
-                alt={node.frontmatter.thumbnail[1].alt}
+                fluid={node.frontmatter.thumbnail.childImageSharp.fluid}
+                alt="" 
               />
             </div>
             <article className="post-card__details">

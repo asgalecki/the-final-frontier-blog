@@ -30,8 +30,8 @@ const BlogPost = ({ data }) => {
             <div className="post-card__image">
               <Img 
                 className="post-card__image--margin"
-                fluid={post.frontmatter.thumbnail[0].src.childImageSharp.fluid} 
-                alt={post.frontmatter.thumbnail[1].alt}
+                fluid={post.frontmatter.thumbnail.childImageSharp.fluid}
+                alt="" 
               />
             </div>
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
@@ -85,12 +85,9 @@ export const query = graphql`
         date(formatString: "DD MMMM YYYY")
         tags
         thumbnail {
-          alt
-          src {
-            childImageSharp {
-              fluid(maxWidth: 590) {
-                ...GatsbyImageSharpFluid
-              }
+          childImageSharp {
+            fluid(maxWidth: 590) {
+              ...GatsbyImageSharpFluid
             }
           }
         }
