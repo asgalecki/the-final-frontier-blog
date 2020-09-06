@@ -29,6 +29,18 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-177342643-2",
+        head: true,
+        anonymize: true,
+        respectDNT: true,
+        exclude: ["/preview/**", "/do-not-track/me/too/"],
+        pageTransitionDelay: 0,
+        defer: false,
+      },
+    },
     `gatsby-plugin-resolve-src`,
     `gatsby-plugin-postcss`,
     `gatsby-plugin-sass`,
