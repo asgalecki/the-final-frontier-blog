@@ -49,33 +49,32 @@ const Tags = ({ pageContext, data }) => {
   )
 }
 
-// Tags.propTypes = {
-//   pageContext: PropTypes.shape({
-//     tag: PropTypes.string.isRequired,
-//   }),
-//   data: PropTypes.shape({
-//     allMarkdownRemark: PropTypes.shape({
-//       totalCount: PropTypes.number.isRequired,
-//       edges: PropTypes.arrayOf(
-//         PropTypes.shape({
-//           node: PropTypes.shape({
-//             id: PropTypes.string.isRequired,
-//             frontmatter: PropTypes.shape({
-//               title: PropTypes.string.isRequired,
-//               date: PropTypes.string.isRequired,
-//               tags: PropTypes.arrayOf(PropTypes.string.isRequired)
-//             }),
-//             fields: PropTypes.shape({
-//               slug: PropTypes.string.isRequired,
-//             }),
-//             excerpt: PropTypes.string.isRequired,
-//             excerptAst: PropTypes.node.isRequired
-//           }),
-//         }).isRequired
-//       ),
-//     }),
-//   }),
-// }
+Tags.propTypes = {
+  pageContext: PropTypes.shape({
+    tag: PropTypes.string.isRequired,
+  }),
+  data: PropTypes.shape({
+    allMarkdownRemark: PropTypes.shape({
+      totalCount: PropTypes.number.isRequired,
+      edges: PropTypes.arrayOf(
+        PropTypes.shape({
+          node: PropTypes.shape({
+            id: PropTypes.string.isRequired,
+            frontmatter: PropTypes.shape({
+              title: PropTypes.string.isRequired,
+              date: PropTypes.string.isRequired,
+              tags: PropTypes.arrayOf(PropTypes.string.isRequired),
+              thumbnail: PropTypes.object
+            }),
+            fields: PropTypes.shape({
+              slug: PropTypes.string.isRequired,
+            }),
+          }),
+        }).isRequired
+      ),
+    }),
+  }),
+}
 
 export default Tags;
 
@@ -106,8 +105,6 @@ export const query = graphql`
           fields {
             slug
           }
-          excerpt
-          excerptAst
         }
       }
     }

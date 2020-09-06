@@ -57,22 +57,23 @@ const BlogPost = ({ data }) => {
   )
 }
 
-// BlogPost.propTypes = {
-//   data: PropTypes.shape({
-//     markdownRemark: PropTypes.shape({
-//       html: PropTypes.string.isRequired,
-//       frontmatter: PropTypes.shape({
-//         title: PropTypes.string.isRequired,
-//         date: PropTypes.string.isRequired,
-//         tags: PropTypes.arrayOf(PropTypes.string.isRequired)
-//       }),
-//       fields: PropTypes.shape({
-//         slug: PropTypes.string.isRequired,
-//       }),
-//       excerpt: PropTypes.string.isRequired,
-//     }),
-//   }),
-// }
+BlogPost.propTypes = {
+  data: PropTypes.shape({
+    markdownRemark: PropTypes.shape({
+      html: PropTypes.string.isRequired,
+      frontmatter: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        date: PropTypes.string.isRequired,
+        tags: PropTypes.arrayOf(PropTypes.string.isRequired),
+        thumbnail: PropTypes.object
+      }),
+      fields: PropTypes.shape({
+        slug: PropTypes.string.isRequired,
+      }),
+      excerpt: PropTypes.string.isRequired,
+    }),
+  }),
+}
 
 export default BlogPost;
 

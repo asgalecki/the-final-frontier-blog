@@ -43,30 +43,30 @@ const BlogList = ({ pageContext, data }) => {
   )
 }
 
-// BlogList.propTypes = {
-//   data: PropTypes.shape({
-//     allMarkdownRemark: PropTypes.shape({
-//       totalCount: PropTypes.number.isRequired,
-//       edges: PropTypes.arrayOf(
-//         PropTypes.shape({
-//           node: PropTypes.shape({
-//             id: PropTypes.string.isRequired,
-//             frontmatter: PropTypes.shape({
-//               title: PropTypes.string.isRequired,
-//               date: PropTypes.string.isRequired,
-//               tags: PropTypes.arrayOf(PropTypes.string.isRequired)
-//             }),
-//             fields: PropTypes.shape({
-//               slug: PropTypes.string.isRequired,
-//             }),
-//             excerpt: PropTypes.node.isRequired,
-//             excerptAst: PropTypes.any.isRequired
-//           }),
-//         }).isRequired
-//       ),
-//     }),
-//   }),
-// }
+BlogList.propTypes = {
+  data: PropTypes.shape({
+    allMarkdownRemark: PropTypes.shape({
+      totalCount: PropTypes.number.isRequired,
+      edges: PropTypes.arrayOf(
+        PropTypes.shape({
+          node: PropTypes.shape({
+            id: PropTypes.string.isRequired,
+            frontmatter: PropTypes.shape({
+              title: PropTypes.string.isRequired,
+              date: PropTypes.string.isRequired,
+              tags: PropTypes.arrayOf(PropTypes.string.isRequired),
+              thumbnail: PropTypes.object
+            }),
+            fields: PropTypes.shape({
+              slug: PropTypes.string.isRequired,
+            }),
+            excerpt: PropTypes.node.isRequired,
+          }),
+        }).isRequired
+      ),
+    }),
+  }),
+}
 
 export default BlogList;
 
@@ -97,7 +97,6 @@ export const query = graphql`
             slug
           }
           excerpt
-          excerptAst
         }
       }
     }

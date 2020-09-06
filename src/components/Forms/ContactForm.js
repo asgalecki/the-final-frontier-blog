@@ -25,7 +25,7 @@ export default class ContactForm extends React.Component {
         <input type="hidden" name="form-name" value="Contact Form" />
         <ul className="contact-form__list">
           <li className="contact-form__element">
-            <label for="contact-form__name" className="contact-form__label">
+            <label htmlFor="contact-form__name" className="contact-form__label">
               Name:
             </label>
             <input
@@ -41,7 +41,7 @@ export default class ContactForm extends React.Component {
             />
           </li>
           <li className="contact-form__element">
-            <label for="contact-form__email" className="contact-form__label">
+            <label htmlFor="contact-form__email" className="contact-form__label">
               Email:
             </label>
             <input
@@ -57,7 +57,7 @@ export default class ContactForm extends React.Component {
             />
           </li>
           <li className="contact-form__element">
-            <label for="contact-form__subject" className="contact-form__label">
+            <label htmlFor="contact-form__subject" className="contact-form__label">
               Subject:
             </label>
             <input
@@ -73,7 +73,7 @@ export default class ContactForm extends React.Component {
             />
           </li>
           <li className="contact-form__element">
-            <label for="contact-form__msg" className="contact-form__label">
+            <label htmlFor="contact-form__msg" className="contact-form__label">
               Message:
             </label> 
             <textarea
