@@ -13,7 +13,6 @@ const PostCard = ({ posts, tagHeader, children }) => {
         {posts.map(({ node }) => (
           <section className="post-card" key={node.id}>
             <div className="post-card__image">
-              {console.log(node.frontmatter.thumbnail)}
               <Img 
                 className="post-card__image" 
                 fluid={node.frontmatter.thumbnail.childImageSharp.fluid}

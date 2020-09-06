@@ -69,6 +69,7 @@ Tags.propTypes = {
             fields: PropTypes.shape({
               slug: PropTypes.string.isRequired,
             }),
+            excerpt: PropTypes.string.isRequired,
           }),
         }).isRequired
       ),
@@ -105,6 +106,7 @@ export const query = graphql`
           fields {
             slug
           }
+          excerpt
         }
       }
     }
