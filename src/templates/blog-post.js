@@ -65,6 +65,7 @@ BlogPost.propTypes = {
         title: PropTypes.string.isRequired,
         date: PropTypes.string.isRequired,
         tags: PropTypes.arrayOf(PropTypes.string.isRequired),
+        description: PropTypes.string.isRequired,
         thumbnail: PropTypes.object
       }),
       fields: PropTypes.shape({
