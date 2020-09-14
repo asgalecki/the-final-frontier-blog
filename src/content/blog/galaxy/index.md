@@ -6,6 +6,7 @@ tags:
   - space
   - universe
   - science
+description: "A post about galaxies."
 thumbnail: galaxy.jpg
 ---
 
@@ -17,4 +18,4 @@ Research released in 2016 revised the number of galaxies in the observable unive
 
 The space between galaxies is filled with a tenuous gas (the intergalactic medium) having an average density of less than one atom per cubic meter. The majority of galaxies are gravitationally organized into groups, clusters, and superclusters. The Milky Way is part of the Local Group, which is dominated by it and the Andromeda Galaxy and is part of the Virgo Supercluster. At the largest scale, these associations are generally arranged into sheets and filaments surrounded by immense voids. Both the Local Group and the Virgo Supercluster are contained in a much larger cosmic structure named Laniakea. 
 
-Source: [Wikipedia](https://en.wikipedia.org/wiki/Galaxy).
+Source: <a href="https://en.wikipedia.org/wiki/Galaxy" target="_blank" rel="noopener noreferrer">Wikipedia</a>.

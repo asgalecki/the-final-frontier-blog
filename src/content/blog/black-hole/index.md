@@ -5,6 +5,7 @@ tags:
   - space
   - science
   - exploration
+description: "A post about a black hole."
 thumbnail: black-hole.jpg
 ---
 
@@ -18,4 +19,4 @@ The presence of a black hole can be inferred through its interaction with other 
 
 On 11 February 2016, the LIGO Scientific Collaboration and the Virgo collaboration announced the first direct detection of gravitational waves, which also represented the first observation of a black hole merger. As of December 2018, eleven gravitational wave events have been observed that originated from ten merging black holes (along with one binary neutron star merger). On 10 April 2019, the first direct image of a black hole and its vicinity was published, following observations made by the Event Horizon Telescope in 2017 of the supermassive black hole in Messier 87's galactic centre. 
 
-Source: [Wikipedia](https://en.wikipedia.org/wiki/Black_hole).
+Source: <a href="https://en.wikipedia.org/wiki/Black_hole" target="_blank" rel="noopener noreferrer">Wikipedia</a>.

@@ -2,6 +2,7 @@
 title: "Sunspot"
 date: "2020-08-15"
 tags: ["sun", "space weather", "solar cycle", "science"]
+description: "A post about sunspots."
 thumbnail: sunspot.jpg
 ---
 
@@ -11,4 +12,4 @@ Individual sunspots or groups of sunspots may last anywhere from a few days to a
 
 Indicating intense magnetic activity, sunspots accompany secondary phenomena such as coronal loops, prominences, and reconnection events. Most solar flares and coronal mass ejections originate in magnetically active regions around visible sunspot groupings. Similar phenomena indirectly observed on stars other than the Sun are commonly called starspots, and both light and dark spots have been measured. 
 
-Source: [Wikipedia](https://en.wikipedia.org/wiki/Sunspot).
+Source: <a href="https://en.wikipedia.org/wiki/Sunspot" target="_blank" rel="noopener noreferrer">Wikipedia</a>.

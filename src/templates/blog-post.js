@@ -16,7 +16,7 @@ const BlogPost = ({ data }) => {
   const post = data.markdownRemark;
   return (
     <Layout>
-      <SEO title={post.frontmatter.title} description={post.excerpt} />
+      <SEO title={post.frontmatter.title} description={post.frontmatter.description} />
       <div className="layout__container">
         <Main>
           <div className="main__container">
@@ -85,6 +85,7 @@ export const query = graphql`
         title
         date(formatString: "DD MMMM YYYY")
         tags
+        description
         thumbnail {
           childImageSharp {
             fluid(maxWidth: 590) {

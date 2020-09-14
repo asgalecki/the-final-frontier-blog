@@ -7,6 +7,7 @@ tags:
   - exploration
   - science
   - aurora
+description: "A post about an auroras."
 thumbnail: aurora-australis-iss.jpg
 ---
 
@@ -16,4 +17,4 @@ Auroras are the result of disturbances in the magnetosphere caused by solar wind
 
 The resulting ionization and excitation of atmospheric constituents emit light of varying color and complexity. The form of the aurora, occurring within bands around both polar regions, is also dependent on the amount of acceleration imparted to the precipitating particles. Precipitating protons generally produce optical emissions as incident hydrogen atoms after gaining electrons from the atmosphere. Proton auroras are usually observed at lower latitudes. 
 
-Source: [Wikipedia](https://en.wikipedia.org/wiki/Aurora).
+Source: <a href="https://en.wikipedia.org/wiki/Aurora" target="_blank" rel="noopener noreferrer">Wikipedia</a>.

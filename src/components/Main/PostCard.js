@@ -30,7 +30,8 @@ const PostCard = ({ posts, tagHeader, children }) => {
                 ))}
               </p>
               <p className="post-card__description">{node.excerpt}
-              <Link className="post-card__link" to={node.fields.slug}>Read more</Link></p>
+                <Link className="post-card__link" to={node.fields.slug}>Read more about "{node.frontmatter.title}"</Link>
+              </p>
             </article>
           </section>
         ))}

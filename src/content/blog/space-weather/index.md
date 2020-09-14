@@ -2,6 +2,7 @@
 title: "Space Weather"
 date: "2020-09-06"
 tags: ["sun", "space weather", "solar flare", "science"]
+description: "A post about space weather."
 thumbnail: earth.jpg
 images: satellite-over-earth.jpg
 ---
@@ -110,4 +111,4 @@ The amount of energy entering the troposphere and stratosphere from space weathe
 - The 2000 Bastille Day event coincided with exceptionally bright aurora.
 - April 21, 2002, the Nozomi Mars Probe was hit by a large SEP event that caused large-scale failure. The mission, which was already about 3 years behind schedule, was abandoned in December 2003.
 
-Source: [Wikipedia](https://en.wikipedia.org/wiki/Space_weather).
+Source: <a href="https://en.wikipedia.org/wiki/Space_weather" target="_blank" rel="noopener noreferrer">Wikipedia</a>.

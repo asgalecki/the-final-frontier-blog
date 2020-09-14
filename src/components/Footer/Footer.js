@@ -14,12 +14,12 @@ const Footer = () => {
           <section className="social-media">
             <ul className="social-media__list">
               <li className="social-media__link">
-                <a href="https://github.com/asgalecki" target="_blank" rel="noreferrer">
+                <a href="https://github.com/asgalecki"  target="_blank" rel="noopener noreferrer">
                   <FontAwesomeIcon icon={faGithub} className="social-media__icon" />
                 </a>
               </li>
               <li className="social-media__link">
-                <a href="https://www.linkedin.com/in/artur-gałecki-29468b1b5" target="_blank" rel="noreferrer">
+                <a href="https://www.linkedin.com/in/artur-gałecki-29468b1b5"  target="_blank" rel="noopener noreferrer">
                   <FontAwesomeIcon icon={faLinkedin} className="social-media__icon" />
                 </a>
               </li>
@@ -42,7 +42,7 @@ const Footer = () => {
       </div>
       <div className="site-bottom">
         Created by
-        <a className="site-bottom__link" href="https://github.com/asgalecki" target="_blank" rel="noreferrer">
+        <a className="site-bottom__link" href="https://github.com/asgalecki"  target="_blank" rel="noopener noreferrer">
           Artur Gałecki
         </a>
         | 2020

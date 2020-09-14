@@ -2,6 +2,7 @@
 title: "Human mission to Mars"
 date: "2020-08-11"
 tags: ["mars", "exploration", "solar system", "science"]
+description: "A post about a human mission to Mars."
 thumbnail: human-on-mars.jpg
 ---
 
@@ -11,4 +12,4 @@ The exploration of Mars has been a goal of national space programs for decades. 
 
 In the 2010s, numerous US, European, and Asian agencies were developing proposals for human missions to Mars. In fiction, Mars is a frequent target of exploration and settlement in books, graphic novels, and films. 
 
-Source: [Wikipedia](https://en.wikipedia.org/wiki/Human_mission_to_Mars).
+Source: <a href="https://en.wikipedia.org/wiki/Human_mission_to_Mars" target="_blank" rel="noopener noreferrer">Wikipedia</a>.

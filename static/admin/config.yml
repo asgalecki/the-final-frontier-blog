@@ -32,6 +32,11 @@ collections:
           name: 'tags', 
           widget: 'list' 
         }
+      - { 
+          label: 'Description', 
+          name: 'description', 
+          widget: 'string' 
+        }
       - {
           label: 'Post Image', 
           name: 'thumbnail',

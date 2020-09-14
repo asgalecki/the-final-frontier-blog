@@ -30,10 +30,10 @@ const AsideBase = ({ data }) => {
           <h3 className="links__title">Links</h3>
           <ul className="links__list">
             <li className="links__list--margin">
-              <a className="links__link" href="https://www.nasa.gov/" target="_blank" rel="noreferrer">NASA</a>
+              <a className="links__link" href="https://www.nasa.gov/" target="_blank" rel="noopener noreferrer">NASA</a>
             </li>
             <li className="links__list--margin">
-              <a className="links__link" href="https://www.esa.int/" target="_blank" rel="noreferrer">European Space Agency</a>
+              <a className="links__link" href="https://www.esa.int/" target="_blank" rel="noopener noreferrer">European Space Agency</a>
             </li>
           </ul>
         </section>
